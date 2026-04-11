@@ -1,0 +1,5 @@
+{
+  "name": "ens-historical-time-machine",
+  "private": true,
+  "packageManager": "pnpm@9.0.0"
+}
