@@ -1,5 +1,17 @@
 {
   "name": "ens-historical-time-machine",
   "private": true,
-  "packageManager": "pnpm@9.0.0"
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "format": "prettier -w ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.39.4",
+    "prettier": "^3.8.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.58.1"
+  }
 }
