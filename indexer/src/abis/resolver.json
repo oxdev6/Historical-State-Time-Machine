@@ -1,0 +1,10 @@
+[
+  "event AddrChanged(bytes32 indexed node, uint256 coinType, bytes newAddress)",
+  "event AddressChanged(bytes32 indexed node, uint256 coinType, bytes newAddress)",
+  "event TextChanged(bytes32 indexed node, string indexed indexedKey, string key, string value)",
+  "event ContenthashChanged(bytes32 indexed node, bytes hash)",
+  "event NameChanged(bytes32 indexed node, string name)",
+  "event ABIChanged(bytes32 indexed node, uint256 contentType)",
+  "event VersionChanged(bytes32 indexed node, uint64 newVersion)"
+]
+
