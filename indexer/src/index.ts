@@ -5,4 +5,10 @@ export {
   fetchResolverLogs,
   resolverTopic0Filter,
 } from "./services/eventFetcher.js";
+export {
+  decodeEnsLog,
+  registrarInterface,
+  registryInterface,
+  resolverInterface,
+} from "./services/decoder.js";
 
