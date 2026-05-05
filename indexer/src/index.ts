@@ -13,4 +13,5 @@ export {
 } from "./services/decoder.js";
 export { createPool } from "./db/pool.js";
 export { persistDecodedLog } from "./services/persist.js";
+export { insertOwnershipHistory } from "./db/ownershipHistory.js";
 

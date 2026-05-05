@@ -2,6 +2,7 @@ import type { Log } from "ethers";
 import type pg from "pg";
 import type { DecodedEnsEvent } from "./decoder.js";
 import { insertEnsEvent } from "../db/ensEvents.js";
+import { insertOwnershipHistory } from "../db/ownershipHistory.js";
 
 function getNodeFromDecoded(decoded: DecodedEnsEvent): string | null {
   const node = decoded.args?.node;
@@ -32,5 +33,16 @@ export async function persistDecodedLog(
     txHash: log.transactionHash,
     blockTimestamp,
   });
+
+  const owner = decoded.args?.owner;
+  if (typeof owner === "string") {
+    await insertOwnershipHistory(client, {
+      node,
+      owner,
+      blockNumber: Number(log.blockNumber),
+      logIndex: log.index,
+      txHash: log.transactionHash,
+    });
+  }
 }
 
